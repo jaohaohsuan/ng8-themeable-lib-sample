@@ -19,6 +19,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "propagating-hammerjs",
+              "keycharm"
+            ],
             "outputPath": "dist/web-app",
             "index": "projects/web-app/src/index.html",
             "main": "projects/web-app/src/main.ts",
@@ -35,8 +39,7 @@
               "projects/web-app/src/styles.scss"
             ],
             "stylePreprocessorOptions": {
-                "includePaths": [
-                ]
+              "includePaths": []
             },
             "scripts": []
           },

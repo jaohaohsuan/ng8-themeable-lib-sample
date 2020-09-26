@@ -1,6 +1,9 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/test-lib",
+  "assets": [
+    "../../node_modules/vis-timeline/styles/vis-timeline-graph2d.min.css"
+  ],
   "lib": {
     "entryFile": "src/public-api.ts",
     "umdModuleIds": {
@@ -8,7 +11,6 @@
       "vis-data/esnext": "vis-data"
     },
     "styleIncludePaths": [
-      
       "../../node_modules/vis-timeline/styles"
     ]
   }

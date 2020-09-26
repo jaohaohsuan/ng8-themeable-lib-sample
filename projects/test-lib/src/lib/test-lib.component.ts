@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { DataSet } from 'vis-data/esnext';
 import { FeatureLicense } from './test-lib.model';
 
@@ -10,6 +10,7 @@ import { FeatureLicense } from './test-lib.model';
     </p>
     <div [appTimeline]="items"></div>
   `,
+  encapsulation: ViewEncapsulation.ShadowDom,
   styleUrls: ['./test-lib.component.scss']
 })
 export class TestLibComponent implements OnInit {

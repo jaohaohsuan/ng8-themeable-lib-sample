@@ -24,7 +24,7 @@
             "main": "projects/web-app/src/main.ts",
             "polyfills": "projects/web-app/src/polyfills.ts",
             "tsConfig": "projects/web-app/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/web-app/src/favicon.ico",
               "projects/web-app/src/assets"
@@ -48,7 +48,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -141,7 +140,12 @@
             "tsConfig": "projects/test-lib/tsconfig.lib.json",
             "project": "projects/test-lib/ng-package.json"
           }
-        },
+        ,          "configurations": {
+            "production": {
+              "tsConfig": "projects/test-lib/tsconfig.lib.prod.json"
+            }
+          }
+},
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {

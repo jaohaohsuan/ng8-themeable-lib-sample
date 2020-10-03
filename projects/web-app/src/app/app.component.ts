@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
     <lib-test-lib></lib-test-lib>
     <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [],
 })
 export class AppComponent {
-  title =                                                                  'web-app';
+  title = 'web-app';
 }

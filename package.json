@@ -1,5 +1,6 @@
 {
   "name": "ng8-themeable-lib-sample",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +10,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~10.1.3",
     "@angular/cdk": "~10.2.2",
@@ -37,6 +37,8 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "component-emitter": "^1.3.0",
+    "git-format-staged": "^2.1.0",
+    "husky": "^4.3.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -47,6 +49,7 @@
     "keycharm": "^0.3.1",
     "moment": "^2.29.0",
     "ng-packagr": "^10.1.0",
+    "prettier": "2.1.2",
     "propagating-hammerjs": "^1.4.7",
     "protractor": "~7.0.0",
     "ts-node": "~7.0.0",
@@ -56,5 +59,10 @@
     "vis-data": "^7.0.0",
     "vis-timeline": "^7.3.9",
     "vis-util": "^4.3.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git-format-staged --formatter 'prettier --ignore-unknown --stdin --stdin-filepath \"{}\"' ."
+    }
   }
 }
